@@ -1,0 +1,134 @@
+---
+import { CheckCircle2Icon, ClockIcon } from "@lucide/astro";
+import { details, timeline } from "../lib/program";
+---
+
+<section id="programs" class="bg-white py-24 lg:py-32">
+    <article class="mx-auto max-w-7xl px-6 space-y-12">
+        <header class="mx-auto max-w-2xl text-center space-y-5">
+            <span
+                class="inline-block rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary"
+            >
+                PROGRAMA
+            </span>
+            <h2
+                class="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl text-balance"
+            >
+                Resumen del programa
+            </h2>
+            <p
+                class="text-base leading-relaxed text-dark lg:text-lg text-pretty"
+            >
+                Una experiencia de aprendizaje completa diseñada para llevarte
+                al siguiente nivel en solo 3 horas.
+            </p>
+        </header>
+
+        <div class="flex flex-col gap-16 lg:flex-row lg:gap-20">
+            <div
+                class="flex flex-col items-center lg:w-85 lg:shrink-0 lg:items-start"
+            >
+                <figure class="relative mb-4">
+                    <div
+                        class="absolute -inset-3 rounded-full bg-secondary/15 blur-2xl"
+                    >
+                    </div>
+                    <img
+                        src="/professor.jpg"
+                        alt="Profesor Martin Zale Winkler"
+                        class="relative rounded-2xl border-2 border-primary/10 object-cover shadow-xl size-65"
+                    />
+                </figure>
+                <h3 class="my-2 text-2xl font-bold text-primary">
+                    Prof. Martin Zale Winkler
+                </h3>
+                <p
+                    class="text-center text-sm font-semibold text-secondary lg:text-left"
+                >
+                    Graduado de UC Berkeley
+                </p>
+                <p
+                    class="mt-1 text-center text-sm font-semibold text-dark lg:text-left"
+                >
+                    Profesor certificado en California
+                </p>
+                <p
+                    class="mt-2 text-center text-sm leading-relaxed text-dark lg:text-left"
+                >
+                    Mas de 30 años de experiencia ayudando a estudiantes y
+                    profesionales a triunfar en todo el mundo.
+                </p>
+
+                <ul class="mt-4 flex w-full flex-col gap-4">
+                    {
+                        details.map((item) => (
+                            <li class="flex items-start gap-3">
+                                <figure class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                                    <item.icon class="size-5 text-primary" />
+                                </figure>
+                                <div>
+                                    <h4 class="text-sm font-bold tracking-wide text-foreground">
+                                        {item.label}
+                                    </h4>
+                                    <p class="text-xs leading-relaxed text-dark">
+                                        {item.value}
+                                    </p>
+                                </div>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+
+            <div class="flex-1 space-y-10">
+                <header class="space-y-2">
+                    <h3 class="text-xl font-bold text-primary">
+                        Linea de tiempo: 3 horas de Master Class
+                    </h3>
+                    <p class="text-sm text-dark">
+                        Cada modulo esta disenado para maximizar tu aprendizaje.
+                    </p>
+                </header>
+
+                <div class="relative">
+                    <div
+                        class="absolute left-4.75 top-2 bottom-2 w-0.5 bg-border"
+                    >
+                    </div>
+
+                    <ul class="flex flex-col gap-8">
+                        {
+                            timeline.map((mod, i) => (
+                                <li class="group relative flex gap-5">
+                                    <div class="relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full border border-secondary bg-background text-sm font-bold text-secondary shadow-sm transition-all group-hover:bg-secondary group-hover:text-white">
+                                        {i + 1}
+                                    </div>
+                                    <article class="flex-1 rounded-xl border border-border bg-white p-5 shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:border-secondary/30 space-y-2">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+                                                <ClockIcon class="size-3" />
+                                                {mod.time}
+                                            </span>
+                                            <h4 class="text-base font-bold text-primary">
+                                                {mod.title}
+                                            </h4>
+                                        </div>
+                                        <p class="text-sm leading-relaxed text-dark">
+                                            {mod.desc}
+                                        </p>
+                                        <figure class="flex items-center gap-1.5 text-xs font-medium text-secondary">
+                                            <CheckCircle2Icon class="size-3.5" />
+                                            <figcaption>
+                                                Incluido en tu Master Class
+                                            </figcaption>
+                                        </figure>
+                                    </article>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>

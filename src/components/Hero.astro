@@ -1,0 +1,144 @@
+---
+import {
+    ArrowRightIcon,
+    ChevronDownIcon,
+    PlayIcon,
+} from "@lucide/astro/icons";
+import { stats, badges } from "../lib/hero";
+---
+
+<section
+    id="hero"
+    class="relative flex flex-col items-center justify-center min-h-screen w-full overflow-hidden"
+>
+    {/* Background */}
+    <div class="absolute inset-0 z-0">
+        <img src="/hero-bg.jpg" alt="" class="object-cover w-full h-full" />
+        <div class="absolute inset-0 bg-primary/90"></div>
+        <div
+            class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,102,0,0.12)_0%,transparent_60%)]"
+        >
+        </div>
+    </div>
+
+    {/* Badges */}
+    <ul class="absolute left-6 top-28 z-10 hidden flex-col gap-3 lg:flex">
+        {
+            badges.map((badge) => (
+                <li class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 backdrop-blur-sm">
+                    <badge.icon class="size-4 text-secondary" />
+                    <span class="text-xs font-medium text-white">
+                        {badge.label}
+                    </span>
+                </li>
+            ))
+        }
+    </ul>
+
+    {/* Content */}
+    <div
+        class="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center gap-16 px-6 pb-12 pt-28 lg:flex-row lg:gap-20 lg:pt-32"
+    >
+        <article
+            class="flex flex-1 flex-col items-center lg:items-start space-y-6"
+        >
+            <span
+                class="flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-5 py-2 text-sm font-semibold text-secondary backdrop-blur-md"
+            >
+                <PlayIcon class="size-4" />
+                Master Class + E-book
+            </span>
+
+            <h1
+                class="text-center text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-left lg:text-6xl xl:text-7xl text-balance"
+            >
+                MASTER CLASS{" "}
+                <span class="text-secondary">SELF-TAUGHT</span>{" "}
+                ENGLISH
+            </h1>
+
+            <h2
+                class="text-center text-xl font-semibold text-white sm:text-2xl lg:text-left text-pretty"
+            >
+                Aprende más rápido, de forma inteligente y económica
+            </h2>
+
+            <p
+                class="max-w-xl text-center text-base leading-relaxed text-light/70 lg:text-left lg:text-lg"
+            >
+                Alcanza el nivel CEFR B2-C1 más rápido que nunca con la Master
+                Class de 3 horas + el e-book SELF-TAUGHT ENGLISH del Prof.
+                Martin Zale Winkler, graduado de UC Berkeley.
+            </p>
+
+            <div
+                class="flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start"
+            >
+                <a
+                    href=""
+                    class="flex items-center gap-2 rounded-lg group bg-secondary text-white py-3 px-5 text-base font-bold shadow-secondary/25 hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 transition-all cursor-pointer"
+                >
+                    Reserva tu sesión ahora
+                    <ArrowRightIcon
+                        class="size-5 transition-transform group-hover:translate-x-1"
+                    />
+                </a>
+                <a
+                    href="#programs"
+                    class="flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 text-white py-3 px-5 text-base font-semibold backdrop-blur-sm hover:bg-white/20 transition-all cursor-pointer"
+                >
+                    Ver programa
+                </a>
+            </div>
+
+            {/* Stats */}
+            <ul class="grid w-full grid-cols-2 gap-4 sm:grid-cols-4">
+                {
+                    stats.map((stat) => (
+                        <li class="flex flex-col items-center gap-1 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+                            <h3 class="text-2xl font-extrabold text-secondary">
+                                {stat.value}
+                            </h3>
+                            <span class="text-xs font-medium text-white/60">
+                                {stat.label}
+                            </span>
+                        </li>
+                    ))
+                }
+            </ul>
+        </article>
+
+        {/* E-book Image */}
+        <article class="flex flex-1 justify-center lg:justify-end">
+            <div class="relative shadow-2xl shadow-white/30 rounded-2xl">
+                {/* Glow effect */}
+                <div
+                    class="absolute -inset-8 rounded-3xl bg-accent/15 blur-3xl"
+                >
+                </div>
+                <div
+                    class="absolute -inset-4 rounded-2xl bg-primary-foreground/5 blur-xl"
+                >
+                </div>
+                <img
+                    src="/ebook-cover.jpg"
+                    alt="Portada del e-book Self-Taught English"
+                    class="relative w-105 h-105 rounded-2xl ring-1 ring-white/10"
+                />
+                {/* Badge overlay */}
+                <div
+                    class="absolute -bottom-4 -right-4 flex items-center gap-2 rounded-xl bg-secondary px-4 py-3 shadow-lg"
+                >
+                    <span class="text-sm font-bold text-white"
+                        >E-book incluido</span
+                    >
+                </div>
+            </div>
+        </article>
+    </div>
+    {/* Scroll indicator */}
+    <div class="relative z-10 flex animate-bounce flex-col items-center">
+        <span class="text-xs font-medium text-white/50">Descubre más</span>
+        <ChevronDownIcon class="size-5 text-white/50" />
+    </div>
+</section>

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import '@fontsource-variable/montserrat';
+@import '@fontsource-variable/inter';
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter Variable', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat Variable', sans-serif;
+}
+
+@theme {
+    --color-primary: #003366;
+    --color-secondary: #FF6600;
+    --color-background: #f5f5f5;
+    --color-border: #e5e5e5;
+    --color-dark: #737373;
+    --color-light: #fafafa;
+    --color-bold: #0a0a0a;
+}
+
+/* Scroll animado al dar clic a un <a> para ir a una sección */
+html {
+    scroll-behavior: smooth;
+}
+
+/* No hacer animación de scroll si el usuario tiene las animaciones desactivadas */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+.scrolled {
+    @apply bg-primary/98 shadow-lg backdrop-blur-md;
+}
