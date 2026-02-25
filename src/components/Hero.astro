@@ -4,14 +4,13 @@ import {
     ChevronDownIcon,
     PlayIcon,
 } from "@lucide/astro/icons";
-import { stats, badges } from "../lib/hero";
+import { stats, badges } from "../libs/hero";
 ---
 
 <section
     id="hero"
     class="relative flex flex-col items-center justify-center min-h-screen w-full overflow-hidden"
 >
-    {/* Background */}
     <div class="absolute inset-0 z-0">
         <img src="/hero-bg.jpg" alt="" class="object-cover w-full h-full" />
         <div class="absolute inset-0 bg-primary/90"></div>
@@ -21,7 +20,6 @@ import { stats, badges } from "../lib/hero";
         </div>
     </div>
 
-    {/* Badges */}
     <ul class="absolute left-6 top-28 z-10 hidden flex-col gap-3 lg:flex">
         {
             badges.map((badge) => (
@@ -35,7 +33,6 @@ import { stats, badges } from "../lib/hero";
         }
     </ul>
 
-    {/* Content */}
     <div
         class="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center gap-16 px-6 pb-12 pt-28 lg:flex-row lg:gap-20 lg:pt-32"
     >
@@ -52,8 +49,8 @@ import { stats, badges } from "../lib/hero";
             <h1
                 class="text-center text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-left lg:text-6xl xl:text-7xl text-balance"
             >
-                MASTER CLASS{" "}
-                <span class="text-secondary">SELF-TAUGHT</span>{" "}
+                MASTER CLASS
+                <span class="text-secondary">SELF-TAUGHT</span>
                 ENGLISH
             </h1>
 
@@ -75,7 +72,7 @@ import { stats, badges } from "../lib/hero";
                 class="flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start"
             >
                 <a
-                    href=""
+                    href="#contact"
                     class="flex items-center gap-2 rounded-lg group bg-secondary text-white py-3 px-5 text-base font-bold shadow-secondary/25 hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 transition-all cursor-pointer"
                 >
                     Reserva tu sesión ahora
@@ -91,7 +88,6 @@ import { stats, badges } from "../lib/hero";
                 </a>
             </div>
 
-            {/* Stats */}
             <ul class="grid w-full grid-cols-2 gap-4 sm:grid-cols-4">
                 {
                     stats.map((stat) => (
@@ -111,7 +107,6 @@ import { stats, badges } from "../lib/hero";
         {/* E-book Image */}
         <article class="flex flex-1 justify-center lg:justify-end">
             <div class="relative shadow-2xl shadow-white/30 rounded-2xl">
-                {/* Glow effect */}
                 <div
                     class="absolute -inset-8 rounded-3xl bg-accent/15 blur-3xl"
                 >
@@ -125,7 +120,6 @@ import { stats, badges } from "../lib/hero";
                     alt="Portada del e-book Self-Taught English"
                     class="relative w-105 h-105 rounded-2xl ring-1 ring-white/10"
                 />
-                {/* Badge overlay */}
                 <div
                     class="absolute -bottom-4 -right-4 flex items-center gap-2 rounded-xl bg-secondary px-4 py-3 shadow-lg"
                 >
@@ -136,7 +130,6 @@ import { stats, badges } from "../lib/hero";
             </div>
         </article>
     </div>
-    {/* Scroll indicator */}
     <div class="relative z-10 flex animate-bounce flex-col items-center">
         <span class="text-xs font-medium text-white/50">Descubre más</span>
         <ChevronDownIcon class="size-5 text-white/50" />

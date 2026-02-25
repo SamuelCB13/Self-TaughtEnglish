@@ -1,12 +1,14 @@
 ---
-import { navbar } from "../lib/navbar";
+import { navbar } from "../libs/navbar";
 ---
 
 <header
     id="header"
     class="fixed top-0 left-0 right-0 bg-transparent w-full z-50"
 >
-    <nav class="flex items-center justify-between h-20 py-5 px-6 transition-all duration-300 mx-auto max-w-7xl">
+    <nav
+        class="flex items-center justify-between h-20 py-5 px-6 transition-all duration-300 mx-auto max-w-7xl"
+    >
         <a href="/">
             <figure class="flex items-center gap-2">
                 <img
@@ -14,36 +16,83 @@ import { navbar } from "../lib/navbar";
                     alt="Logo de Self-Taught English"
                     class="w-20"
                 />
-                <figcaption class="text-white font-black">
+                <figcaption class="text-white font-black block lg:hidden xl:block">
                     Self-Taught English
                 </figcaption>
             </figure>
         </a>
-        <ul class="flex items-center gap-7 text-white font-bold">
+
+        <ul class="hidden lg:flex items-center gap-7 text-white font-bold">
             {
                 navbar.map((item) => (
-                    <a
-                        href={item.href}
-                        class="hover:text-secondary transition-colors duration-200"
-                    >
-                        {item.value}
-                    </a>
+                    <li>
+                        <a
+                            href={item.href}
+                            class="hover:text-secondary transition-colors duration-200"
+                        >
+                            {item.value}
+                        </a>
+                    </li>
                 ))
             }
         </ul>
+
+        <a
+            href="#contact"
+            class="hidden lg:flex items-center gap-2 rounded-lg bg-secondary text-white py-2 px-4 text-base font-bold shadow-secondary/25 hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 transition-all cursor-pointer"
+        >
+            Reserva ahora
+        </a>
+
         <button
-            class="flex items-center gap-2 rounded-lg bg-secondary text-white py-2 px-4 text-base font-bold shadow-secondary/25 hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 transition-all cursor-pointer"
-            >Reserva ahora
+            id="menu-btn"
+            class="lg:hidden text-white text-3xl focus:outline-none"
+            aria-label="Abrir menú"
+        >
+            ☰
         </button>
     </nav>
+
+    <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-primary backdrop-blur-lg p-6"
+    >
+        <ul class="flex flex-col gap-5 text-white font-bold">
+            {
+                navbar.map((item) => (
+                    <li>
+                        <a
+                            href={item.href}
+                            class="block hover:text-secondary transition-colors duration-200"
+                        >
+                            {item.value}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+
+        <a
+            href="#contact"
+            class="mt-6 inline-block w-full text-center rounded-lg bg-secondary text-white py-3 font-bold hover:bg-secondary/90 transition-all"
+        >
+            Reserva ahora
+        </a>
+    </div>
 </header>
 
 <script>
     const header = document.getElementById("header");
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
 
     const handleScroll = () => {
         header?.classList.toggle("scrolled", window.scrollY > 0);
     };
+
+    menuBtn?.addEventListener("click", () => {
+        mobileMenu?.classList.toggle("hidden");
+    });
 
     window.addEventListener("scroll", handleScroll, { passive: true });
 </script>

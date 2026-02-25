@@ -1,0 +1,97 @@
+---
+import {
+    ArrowRightIcon,
+    BookOpenIcon,
+    GlobeIcon,
+    GraduationCapIcon,
+    MailIcon,
+} from "@lucide/astro";
+---
+
+<section
+    id="contact"
+    class="relative overflow-hidden bg-primary py-24 lg:py-32"
+>
+    {/* Decorative bg */}
+    <div class="absolute inset-0 opacity-[0.07]">
+        <div
+            class="absolute -top-40 -right-40 size-125 rounded-full bg-secondary"
+        >
+        </div>
+        <div
+            class="absolute -bottom-40 -left-40 size-125 rounded-full bg-secondary"
+        >
+        </div>
+    </div>
+
+    <article
+        class="relative z-10 mx-auto max-w-4xl px-6 text-center space-y-10"
+    >
+        <header class="mx-auto max-w-2xl text-center space-y-5">
+            <span
+                class="inline-block rounded-full border border-secondary/30 bg-secondary/10 px-5 py-2 text-xs font-semibold text-secondary backdrop-blur-md"
+            >
+                ACTÚA AHORA
+            </span>
+            <h2
+                class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl text-balance"
+            >
+                El inglés es la clave para tu futuro y tu éxito global
+            </h2>
+            <p
+                class="text-base leading-relaxed text-light/70 lg:text-lg text-pretty"
+            >
+                No esperes más. Reserva tu Master Class hoy y da el primer paso
+                hacia el dominio del inglés con un método probado y eficiente.
+            </p>
+        </header>
+
+        <ul class="mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-3">
+            <li
+                class="flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-6 backdrop-blur-sm"
+            >
+                <GraduationCapIcon class="size-7 text-secondary" />
+                <span class="text-sm font-semibold text-white"
+                    >Certificado UC Berkeley</span
+                >
+            </li>
+            <li
+                class="flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-6 backdrop-blur-sm"
+            >
+                <BookOpenIcon class="size-7 text-secondary" />
+                <span class="text-sm font-semibold text-white"
+                    >E-book incluido</span
+                >
+            </li>
+            <li
+                class="flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-6 backdrop-blur-sm"
+            >
+                <GlobeIcon class="size-7 text-secondary" />
+                <span class="text-sm font-semibold text-white"
+                    >30+ anos de experiencia</span
+                >
+            </li>
+        </ul>
+
+        <div
+            class="flex w-full flex-col items-center justify-center gap-4 sm:flex-row"
+        >
+            <a
+                href=""
+                class="flex items-center gap-2 rounded-lg group bg-secondary text-white py-3 px-5 text-base font-bold shadow-secondary/25 hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 transition-all cursor-pointer"
+            >
+                <ArrowRightIcon
+                    class="size-5 transition-transform group-hover:translate-x-1"
+                />
+                Escríbele a Martin en LinkedIn
+            </a>
+            <a
+                href="mailto:"
+                class="flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 text-white py-3 px-5 text-base font-semibold backdrop-blur-sm hover:bg-white/20 transition-all cursor-pointer"
+            >
+                <MailIcon class="size-5" />
+                Reservar por correo
+            </a>
+        </div>
+    </article>
+</section>

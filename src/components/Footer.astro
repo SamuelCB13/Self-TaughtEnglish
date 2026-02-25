@@ -1,0 +1,96 @@
+---
+import {
+    BookOpenIcon,
+    LinkedinIcon,
+    MailIcon,
+    MapPinIcon,
+} from "@lucide/astro";
+import { footer } from "../libs/footer";
+---
+
+<footer class="border-t border-border bg-white">
+    <section class="mx-auto max-w-7xl px-6 py-4 lg:py-8 space-y-5">
+        <article
+            class="flex items-center gap-10 justify-evenly md:justify-between"
+        >
+            <div>
+                <ul class="flex flex-col md:flex-row gap-4">
+                    {
+                        footer.map((item) => (
+                            <a
+                                href={item.href}
+                                class="text-sm font-bold text-dark transition-colors hover:text-primary"
+                            >
+                                {item.value}
+                            </a>
+                        ))
+                    }
+                </ul>
+            </div>
+
+            <div>
+                <ul class="flex flex-col md:flex-row gap-4">
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="flex items-center gap-2 text-sm font-bold text-dark transition-colors hover:text-primary"
+                        >
+                            <LinkedinIcon class="size-4" />
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="mailto:"
+                            class="flex items-center gap-2 text-sm font-bold text-dark transition-colors hover:text-primary"
+                        >
+                            <MailIcon class="size-4" />
+                            Email
+                        </a>
+                    </li>
+                    <li>
+                        <span class="flex items-center gap-2 text-sm font-bold text-dark">
+                            <MapPinIcon class="size-4" />
+                            California, USA
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <div class="grow border-t border-border"></div>
+
+        <article
+            class="flex flex-col md:flex-row items-center md:justify-evenly gap-4"
+        >
+            <div class="flex items-center justify-center gap-2.5">
+                <div
+                    class="flex size-9 items-center justify-center rounded-lg bg-primary"
+                >
+                    <BookOpenIcon class="size-5 text-white" />
+                </div>
+                <span class="text-lg font-black">Self-Taught English</span>
+            </div>
+            <p class="text-sm leading-relaxed text-dark text-center">
+                Aprende inglés más rápido, de forma inteligente y económica con
+                el Prof. Martin Zale Winkler.
+            </p>
+        </article>
+
+        <div class="grow border-t border-border"></div>
+
+        <article
+            class="flex flex-col items-center gap-4 md:flex-row md:justify-between"
+        >
+            <p class="text-xs text-dark">
+                2026 Prof. Martin Zale Winkler. Todos los derechos reservados.
+            </p>
+            <p class="text-xs text-dark">
+                Master Class English | Self-Study English | UC Berkeley
+                Professor
+            </p>
+        </article>
+    </section>
+</footer>
