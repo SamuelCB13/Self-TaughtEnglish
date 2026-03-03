@@ -97,40 +97,53 @@ import { businessPricing } from "../libs/pricing";
                         linea.
                     </p>
 
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left">
-                            <thead>
-                                <tr
-                                    class="border-b-2 border-primary/15 text-center"
-                                >
+                    <div class="overflow-x-auto -mx-4 sm:mx-0">
+                        <table class="min-w-full border-collapse text-left">
+                            <thead class="hidden sm:table-header-group">
+                                <tr class="border-b border-primary/20">
                                     <th
-                                        class="pb-4 text-xs font-bold uppercase tracking-wider text-dark"
+                                        class="pb-4 px-4 text-xs font-bold uppercase tracking-wider text-dark"
                                     >
                                         Participants
                                     </th>
                                     <th
-                                        class="pb-4 text-xs font-bold uppercase tracking-wider text-dark"
+                                        class="pb-4 px-4 text-xs font-bold uppercase tracking-wider text-dark"
                                     >
                                         Price per person
                                     </th>
                                     <th
-                                        class="pb-4 text-xs font-bold uppercase tracking-wider text-dark"
+                                        class="pb-4 px-4 text-xs font-bold uppercase tracking-wider text-dark text-right"
                                     >
                                         Estimated total
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
+
+                            <tbody class="divide-y divide-border/60">
                                 {
-                                    businessPricing.map((row, i) => (
-                                        <tr class="border-b border-border/50 transition-colors hover:bg-light">
-                                            <td class="py-4 text-sm font-medium text-bold text-center">
+                                    businessPricing.map((row) => (
+                                        <tr class="block sm:table-row rounded-xl sm:rounded-none bg-light/40 sm:bg-transparent p-4 sm:p-0 mb-4 sm:mb-0">
+                                            {/* Participants */}
+                                            <td class="flex justify-between sm:table-cell px-0 sm:px-4 py-2 text-sm font-medium text-dark">
+                                                <span class="sm:hidden font-semibold text-primary">
+                                                    Participants
+                                                </span>
                                                 {row.participants}
                                             </td>
-                                            <td class="py-4 text-sm text-dark text-center">
+
+                                            {/* Price per person */}
+                                            <td class="flex justify-between sm:table-cell px-0 sm:px-4 py-2 text-sm text-dark">
+                                                <span class="sm:hidden font-semibold text-primary">
+                                                    Price per person
+                                                </span>
                                                 {row.pricePerPerson}
                                             </td>
-                                            <td class="py-4 text-lg font-bold text-primary text-center">
+
+                                            {/* Total */}
+                                            <td class="flex justify-between sm:table-cell px-0 sm:px-4 py-2 text-base sm:text-lg font-bold text-primary sm:text-right">
+                                                <span class="sm:hidden font-semibold text-primary">
+                                                    Estimated total
+                                                </span>
                                                 {row.totalRange}
                                             </td>
                                         </tr>

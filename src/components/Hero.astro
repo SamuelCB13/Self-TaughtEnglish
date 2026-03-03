@@ -5,7 +5,7 @@ import { stats, badges } from "../libs/hero";
 
 <section
     id="hero"
-    class="relative flex flex-col items-center justify-center min-h-screen w-full overflow-hidden"
+    class="relative flex flex-col items-center justify-center xl:min-h-dvh w-full overflow-hidden"
 >
     <div class="absolute inset-0 z-0">
         <img src="/hero-bg.jpg" alt="" class="object-cover w-full h-full" />
@@ -16,7 +16,7 @@ import { stats, badges } from "../libs/hero";
         </div>
     </div>
 
-    <ul class="absolute left-6 top-28 z-10 hidden flex-col gap-3 lg:flex">
+    <ul class="absolute right-6 top-24 z-10 hidden flex-col gap-2 lg:flex">
         {
             badges.map((badge) => (
                 <li class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 backdrop-blur-sm">
@@ -36,7 +36,7 @@ import { stats, badges } from "../libs/hero";
             class="flex flex-1 flex-col items-center lg:items-start space-y-6"
         >
             <h1
-                class="text-center text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-left lg:text-6xl xl:text-7xl text-balance"
+                class="text-center font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-left text-4xl lg:text-5xl xl:text-7xl text-balance"
             >
                 MASTER CLASS
                 <span class="text-secondary">SELF-TAUGHT</span>
@@ -44,14 +44,14 @@ import { stats, badges } from "../libs/hero";
             </h1>
 
             <h2
-                class="text-center text-xl font-semibold text-white sm:text-2xl lg:text-left text-pretty"
+                class="text-center font-semibold text-white text-lg xl:text-xl lg:text-left text-pretty"
             >
                 Learn how to improve your English — faster, smarter, and more
                 affordably.
             </h2>
 
             <p
-                class="max-w-xl text-center text-base leading-relaxed text-light/70 lg:text-left lg:text-lg"
+                class="max-w-xl text-center leading-relaxed text-light/70 lg:text-left text-sm lg:text-base xl:text-lg"
             >
                 In just 3 hours, Professor Martin Zale Winkler (UC Berkeley
                 graduate, California-certified instructor) will guide you
@@ -65,7 +65,7 @@ import { stats, badges } from "../libs/hero";
             >
                 <a
                     href="#contact"
-                    class="flex items-center gap-2 rounded-lg group bg-secondary text-white py-3 px-5 text-base font-bold shadow-secondary/25 hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 transition-all cursor-pointer"
+                    class="flex items-center gap-2 rounded-lg group bg-secondary text-white py-3 px-5 text-sm xl:text-base font-bold shadow-secondary/25 hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 transition-all cursor-pointer"
                 >
                     Book your session now
                     <ArrowRightIcon
@@ -74,17 +74,17 @@ import { stats, badges } from "../libs/hero";
                 </a>
                 <a
                     href="#programs"
-                    class="flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 text-white py-3 px-5 text-base font-semibold backdrop-blur-sm hover:bg-white/20 transition-all cursor-pointer"
+                    class="flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 text-white py-3 px-5 text-sm xl:text-base font-semibold backdrop-blur-sm hover:bg-white/20 transition-all cursor-pointer"
                 >
                     See program
                 </a>
             </div>
 
-            <ul class="grid w-full grid-cols-2 gap-4 sm:grid-cols-4">
+            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4">
                 {
                     stats.map((stat) => (
                         <li class="flex flex-col items-center gap-1 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                            <h3 class="text-2xl font-extrabold text-secondary">
+                            <h3 class="text-base xl:text-xl font-extrabold text-secondary">
                                 {stat.value}
                             </h3>
                             <span class="text-xs font-medium text-white/60">
@@ -97,7 +97,7 @@ import { stats, badges } from "../libs/hero";
         </article>
 
         {/* E-book Image */}
-        <article class="flex flex-1 justify-center lg:justify-end">
+        <article class="flex flex-1 justify-center lg:justify-center">
             <div class="relative shadow-2xl shadow-white/30 rounded-2xl">
                 <div
                     class="absolute -inset-8 rounded-3xl bg-accent/15 blur-3xl"
@@ -110,7 +110,7 @@ import { stats, badges } from "../libs/hero";
                 <img
                     src="/ebook-cover.jpg"
                     alt="Portada del e-book Self-Taught English"
-                    class="relative w-105 h-105 rounded-2xl ring-1 ring-white/10"
+                    class="relative w-96 xl:w-105 h-full rounded-2xl ring-1 ring-white/10"
                 />
                 <div
                     class="absolute -bottom-4 -right-4 flex items-center gap-2 rounded-xl bg-secondary px-4 py-3 shadow-lg"
