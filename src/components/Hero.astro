@@ -1,9 +1,5 @@
 ---
-import {
-    ArrowRightIcon,
-    ChevronDownIcon,
-    PlayIcon,
-} from "@lucide/astro/icons";
+import { ArrowRightIcon, ChevronDownIcon, PlayIcon } from "@lucide/astro/icons";
 import { stats, badges } from "../libs/hero";
 ---
 
@@ -25,7 +21,7 @@ import { stats, badges } from "../libs/hero";
             badges.map((badge) => (
                 <li class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 backdrop-blur-sm">
                     <badge.icon class="size-4 text-secondary" />
-                    <span class="text-xs font-medium text-white">
+                    <span class={`text-xs ${badge.font} text-white`}>
                         {badge.label}
                     </span>
                 </li>
@@ -39,13 +35,6 @@ import { stats, badges } from "../libs/hero";
         <article
             class="flex flex-1 flex-col items-center lg:items-start space-y-6"
         >
-            <span
-                class="flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-5 py-2 text-sm font-semibold text-secondary backdrop-blur-md"
-            >
-                <PlayIcon class="size-4" />
-                Master Class + E-book
-            </span>
-
             <h1
                 class="text-center text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-left lg:text-6xl xl:text-7xl text-balance"
             >
@@ -57,15 +46,18 @@ import { stats, badges } from "../libs/hero";
             <h2
                 class="text-center text-xl font-semibold text-white sm:text-2xl lg:text-left text-pretty"
             >
-                Aprende más rápido, de forma inteligente y económica
+                Learn how to improve your English — faster, smarter, and more
+                affordably.
             </h2>
 
             <p
                 class="max-w-xl text-center text-base leading-relaxed text-light/70 lg:text-left lg:text-lg"
             >
-                Alcanza el nivel CEFR B2-C1 más rápido que nunca con la Master
-                Class de 3 horas + el e-book SELF-TAUGHT ENGLISH del Prof.
-                Martin Zale Winkler, graduado de UC Berkeley.
+                In just 3 hours, Professor Martin Zale Winkler (UC Berkeley
+                graduate, California-certified instructor) will guide you
+                through proven techniques, revolutionary AI tools, and a clear
+                roadmap to CEFR B2-C1 proficiency, supported by the SELF-TAUGHT
+                ENGLISH e-book.
             </p>
 
             <div
@@ -75,7 +67,7 @@ import { stats, badges } from "../libs/hero";
                     href="#contact"
                     class="flex items-center gap-2 rounded-lg group bg-secondary text-white py-3 px-5 text-base font-bold shadow-secondary/25 hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 transition-all cursor-pointer"
                 >
-                    Reserva tu sesión ahora
+                    Book your session now
                     <ArrowRightIcon
                         class="size-5 transition-transform group-hover:translate-x-1"
                     />
@@ -84,7 +76,7 @@ import { stats, badges } from "../libs/hero";
                     href="#programs"
                     class="flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 text-white py-3 px-5 text-base font-semibold backdrop-blur-sm hover:bg-white/20 transition-all cursor-pointer"
                 >
-                    Ver programa
+                    See program
                 </a>
             </div>
 
@@ -124,14 +116,14 @@ import { stats, badges } from "../libs/hero";
                     class="absolute -bottom-4 -right-4 flex items-center gap-2 rounded-xl bg-secondary px-4 py-3 shadow-lg"
                 >
                     <span class="text-sm font-bold text-white"
-                        >E-book incluido</span
+                        >E-book included</span
                     >
                 </div>
             </div>
         </article>
     </div>
     <div class="relative z-10 flex animate-bounce flex-col items-center">
-        <span class="text-xs font-medium text-white/50">Descubre más</span>
+        <span class="text-xs font-medium text-white/50">Discover more</span>
         <ChevronDownIcon class="size-5 text-white/50" />
     </div>
 </section>

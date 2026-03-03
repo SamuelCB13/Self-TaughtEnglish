@@ -1,135 +1,166 @@
 ---
-import { ArrowRightIcon, CheckIcon } from "@lucide/astro";
-import { packages } from "../libs/pricing";
+import {
+    ArrowRightIcon,
+    BriefcaseIcon,
+    Building2Icon,
+    MailIcon,
+} from "@lucide/astro";
+import { businessPricing } from "../libs/pricing";
 ---
 
 <section id="prices" class="bg-background py-24 lg:py-32">
-    <article class="mx-auto max-w-7xl px-6">
+    <article class="mx-auto max-w-4xl px-6 space-y-12">
         <header class="mx-auto max-w-2xl text-center space-y-5">
             <span
                 class="inline-block rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary"
             >
-                PRECIOS
+                PRICES
             </span>
             <h2
                 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl text-balance"
             >
-                Precios y paquetes
+                Prices and packages
             </h2>
             <p
                 class="text-base leading-relaxed text-dark lg:text-lg text-pretty"
             >
-                Opciones flexibles para universidades, empresas y grupos de
-                profesionales.
+                Flexible options for universities, companies, and professional
+                groups.
             </p>
         </header>
 
-        <div class="mt-16 grid gap-8 lg:mt-20 lg:grid-cols-3">
-            {
-                packages.map((pkg) => (
-                    <article
-                        class={`relative flex flex-col overflow-hidden rounded-2xl transition-all duration-300 ${
-                            pkg.highlight
-                                ? "bg-primary text-light shadow-2xl shadow-primary/20 ring-2 ring-secondary lg:scale-105"
-                                : "border border-border bg-white text-bold shadow-sm hover:shadow-xl"
-                        }`}
+        <div class="flex flex-col gap-16 lg:gap-20">
+            <div
+                class="rounded-2xl border border-border bg-white p-8 shadow-sm lg:p-10 space-y-5"
+            >
+                <header class="flex items-center gap-4">
+                    <figure
+                        class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/10"
                     >
-                        {pkg.highlight && (
-                            <div class="bg-secondary px-4 py-2 text-center text-xs font-bold text-background tracking-wider">
-                                MÁS POPULAR
-                            </div>
-                        )}
+                        <Building2Icon class="size-6 text-primary" />
+                    </figure>
+                    <h3 class="text-2xl font-bold text-primary">
+                        For Universities
+                    </h3>
+                </header>
 
-                        <div class="flex flex-1 flex-col p-8">
-                            <figure
-                                class={`mb-6 flex size-12 items-center justify-center rounded-xl ${
-                                    pkg.highlight
-                                        ? "bg-light/10"
-                                        : "bg-primary/10"
-                                }`}
-                            >
-                                <pkg.icon
-                                    class={`size-6 ${pkg.highlight ? "text-secondary" : "text-primary"}`}
-                                />
-                            </figure>
+                <div class="h-px bg-border"></div>
 
-                            <header class="space-y-4">
-                                <h3 class="text-xl font-bold">{pkg.title}</h3>
+                <div class="space-y-3">
+                    <h4 class="text-base font-semibold text-primary">
+                        Price available upon request.
+                    </h4>
+                    <p class="text-sm leading-relaxed text-dark">
+                        Special institutional rates tailored to the needs of
+                        each university. Includes a 3-hour master class and a
+                        SELF-TAUGHT ENGLISH e-book for each participant.
+                    </p>
+                </div>
 
-                                <span class="text-3xl font-extrabold">
-                                    {pkg.price}
-                                </span>
+                <a
+                    href="mailto:"
+                    class="inline-flex items-center gap-2 rounded-lg group bg-primary text-white py-2 px-4 text-sm font-bold shadow-primary/25 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 transition-all cursor-pointer"
+                >
+                    Request information
+                    <MailIcon
+                        class="size-4 transition-transform group-hover:translate-x-1"
+                    />
+                </a>
+            </div>
 
-                                <p
-                                    class={`text-xs mt-2 ${
-                                        pkg.highlight
-                                            ? "text-light/60"
-                                            : "text-dark"
-                                    }`}
-                                >
-                                    {pkg.priceNote}
-                                </p>
-
-                                <p
-                                    class={`text-sm leading-relaxed ${
-                                        pkg.highlight
-                                            ? "text-light/75"
-                                            : "text-dark"
-                                    }`}
-                                >
-                                    {pkg.description}
-                                </p>
-                            </header>
-
-                            {/* Divider */}
-                            <div
-                                class={`my-5 h-px ${pkg.highlight ? "bg-light/15" : "bg-border"}`}
-                            />
-
-                            <ul class="flex flex-1 flex-col gap-3">
-                                {pkg.features.map((item) => (
-                                    <li class="flex items-start gap-3 text-sm">
-                                        <CheckIcon
-                                            class={`mt-0.5 size-4 shrink-0 ${
-                                                pkg.highlight
-                                                    ? "text-secondary"
-                                                    : "text-primary"
-                                            }`}
-                                        />
-                                        <span
-                                            class={
-                                                pkg.highlight
-                                                    ? "text-light/85"
-                                                    : "text-dark"
-                                            }
-                                        >
-                                            {item}
-                                        </span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <a
-                                href=""
-                                class={`flex items-center justify-center gap-2 text-white rounded-lg group py-2 px-4 text-sm font-bold transition-all cursor-pointer mt-6 ${
-                                    pkg.highlight
-                                        ? "bg-secondary shadow-lg shadow-secondary/25 hover:bg-secondary/90 hover:shadow-xl"
-                                        : "bg-primary hover:bg-primary/90"
-                                }`}
-                            >
-                                {pkg.cta}
-                                <ArrowRightIcon class="size-5 transition-transform group-hover:translate-x-1" />
-                            </a>
+            <div
+                class="overflow-hidden rounded-2xl border-2 border-primary bg-white shadow-xl shadow-primary/10"
+            >
+                <div class="bg-primary p-8 lg:p-10">
+                    <header class="flex items-center gap-4">
+                        <figure
+                            class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-white/10"
+                        >
+                            <BriefcaseIcon class="size-6 text-secondary" />
+                        </figure>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">
+                                For Businesses
+                            </h3>
+                            <p class="text-sm text-light/70">
+                                Boost the English skills of your executives and
+                                teams
+                            </p>
                         </div>
-                    </article>
-                ))
-            }
+                    </header>
+                </div>
+
+                <div class="p-8 lg:p-10 space-y-5">
+                    <p class="text-sm leading-relaxed text-dark">
+                        Master Class de 3 horas + e-book SELF-TAUGHT ENGLISH
+                        incluido para cada participante. Formato presencial o en
+                        linea.
+                    </p>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr
+                                    class="border-b-2 border-primary/15 text-center"
+                                >
+                                    <th
+                                        class="pb-4 text-xs font-bold uppercase tracking-wider text-dark"
+                                    >
+                                        Participants
+                                    </th>
+                                    <th
+                                        class="pb-4 text-xs font-bold uppercase tracking-wider text-dark"
+                                    >
+                                        Price per person
+                                    </th>
+                                    <th
+                                        class="pb-4 text-xs font-bold uppercase tracking-wider text-dark"
+                                    >
+                                        Estimated total
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    businessPricing.map((row, i) => (
+                                        <tr class="border-b border-border/50 transition-colors hover:bg-light">
+                                            <td class="py-4 text-sm font-medium text-bold text-center">
+                                                {row.participants}
+                                            </td>
+                                            <td class="py-4 text-sm text-dark text-center">
+                                                {row.pricePerPerson}
+                                            </td>
+                                            <td class="py-4 text-lg font-bold text-primary text-center">
+                                                {row.totalRange}
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="text-xs text-dark">
+                        * Workshop attendance limit: 40 people. Special rates
+                        apply for large seminars (40+).
+                    </p>
+
+                    <a
+                        href="mailto:"
+                        class="inline-flex items-center gap-2 rounded-lg group bg-primary text-white py-2 px-4 text-sm font-bold shadow-primary/25 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 transition-all cursor-pointer"
+                    >
+                        Book a session
+                        <ArrowRightIcon
+                            class="size-4 transition-transform group-hover:translate-x-1"
+                        />
+                    </a>
+                </div>
+            </div>
         </div>
 
         <footer class="mt-10 text-center text-sm text-dark">
-            Limite de asistencia: 40 personas en talleres. Tarifas especiales
-            para seminarios grandes. Contáctanos para una cotización
-            personalizada.
+            Attendance limit: 40 people in workshops. Special rates for large
+            seminars. Contact us for a personalized quote.
         </footer>
     </article>
 </section>

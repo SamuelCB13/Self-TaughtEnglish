@@ -3,9 +3,10 @@ import {
     BookOpenIcon,
     LinkedinIcon,
     MailIcon,
-    MapPinIcon,
 } from "@lucide/astro";
 import { footer } from "../libs/footer";
+
+const year = new Date().getFullYear();
 ---
 
 <footer class="border-t border-border bg-white">
@@ -50,12 +51,6 @@ import { footer } from "../libs/footer";
                             Email
                         </a>
                     </li>
-                    <li>
-                        <span class="flex items-center gap-2 text-sm font-bold text-dark">
-                            <MapPinIcon class="size-4" />
-                            California, USA
-                        </span>
-                    </li>
                 </ul>
             </div>
         </article>
@@ -74,8 +69,7 @@ import { footer } from "../libs/footer";
                 <span class="text-lg font-black">Self-Taught English</span>
             </div>
             <p class="text-sm leading-relaxed text-dark text-center">
-                Aprende inglés más rápido, de forma inteligente y económica con
-                el Prof. Martin Zale Winkler.
+                UC Berkeley credential • California certification • 30+ years of experience
             </p>
         </article>
 
@@ -85,7 +79,7 @@ import { footer } from "../libs/footer";
             class="flex flex-col items-center gap-4 md:flex-row md:justify-between"
         >
             <p class="text-xs text-dark">
-                2026 Prof. Martin Zale Winkler. Todos los derechos reservados.
+                {year} Prof. Martin Zale Winkler. All rights reserved.
             </p>
             <p class="text-xs text-dark">
                 Master Class English | Self-Study English | UC Berkeley

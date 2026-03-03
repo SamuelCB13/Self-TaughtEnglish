@@ -1,5 +1,10 @@
 ---
-import { ChevronLeftIcon, ChevronRightIcon, QuoteIcon, StarIcon } from "@lucide/astro";
+import {
+    ChevronLeftIcon,
+    ChevronRightIcon,
+    QuoteIcon,
+    StarIcon,
+} from "@lucide/astro";
 import { testimonials } from "../libs/testimonials";
 ---
 
@@ -9,17 +14,18 @@ import { testimonials } from "../libs/testimonials";
             <span
                 class="inline-block rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary"
             >
-                TESTIMONIOS
+                TESTIMONIALS
             </span>
             <h2
                 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl text-balance"
             >
-                Lo que dicen nuestros participantes
+                What our participants say
             </h2>
             <p
                 class="text-base leading-relaxed text-dark lg:text-lg text-pretty"
             >
-                Miles de estudiantes y profesionales ya transformaron su inglés.
+                Thousands of students and professionals have already transformed
+                their English.
             </p>
         </header>
 
@@ -36,7 +42,9 @@ import { testimonials } from "../libs/testimonials";
                             </div>
                             <div class="flex gap-0.5">
                                 {Array.from({ length: 5 }).map((_, i) => (
-                                    <StarIcon class={`size-4 ${i < t.estrellas ? "text-secondary fill-secondary" : "text-dark/50"}`} />
+                                    <StarIcon
+                                        class={`size-4 ${i < t.estrellas ? "text-secondary fill-secondary" : "text-dark/50"}`}
+                                    />
                                 ))}
                             </div>
                             <p class="text-sm leading-relaxed text-gray-600 flex-1">

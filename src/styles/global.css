@@ -41,5 +41,5 @@ html {
 }
 
 .scrolled {
-    @apply bg-primary/98 shadow-lg backdrop-blur-md;
+    @apply bg-primary/98 backdrop-blur-md;
 }

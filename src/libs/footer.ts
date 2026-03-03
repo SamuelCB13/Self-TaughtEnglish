@@ -1,8 +1,8 @@
 export const footer = [
-    { value: "Inicio", href: "#hero" },
-    { value: "Beneficios", href: "#benefits" },
-    { value: "Programas", href: "#programs" },
-    { value: "Precios", href: "#prices" },
-    { value: "Testimonios", href: "#testimonials" },
-    { value: "Contacto", href: "#contact" },
+    { value: "Home", href: "#hero" },
+    { value: "Benefits", href: "#benefits" },
+    { value: "Programs", href: "#programs" },
+    { value: "Prices", href: "#prices" },
+    { value: "Testimonials", href: "#testimonials" },
+    { value: "Contact", href: "#contact" },
 ]
