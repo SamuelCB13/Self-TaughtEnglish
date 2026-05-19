@@ -1,0 +1,171 @@
+---
+import {
+    ArrowRightIcon,
+    BriefcaseIcon,
+    Building2Icon,
+    MailIcon,
+} from "@lucide/astro";
+import { businessPricingZh } from "../../libs/pricing";
+---
+
+<section id="prices" class="bg-background py-24 lg:py-32">
+    <article class="mx-auto max-w-4xl px-6 space-y-12">
+        <header class="mx-auto max-w-2xl text-center space-y-5">
+            <span
+                class="inline-block rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary"
+            >
+                价格
+            </span>
+            <h2
+                class="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl text-balance"
+            >
+                价格与套餐
+            </h2>
+            <p
+                class="text-base leading-relaxed text-dark lg:text-lg text-pretty"
+            >
+                为高校、企业及专业团体提供灵活的方案。
+            </p>
+        </header>
+
+        <div class="flex flex-col gap-16 lg:gap-20">
+            <div
+                class="rounded-2xl border border-border bg-white p-8 shadow-sm lg:p-10 space-y-5"
+            >
+                <header class="flex items-center gap-4">
+                    <figure
+                        class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/10"
+                    >
+                        <Building2Icon class="size-6 text-primary" />
+                    </figure>
+                    <h3 class="text-2xl font-bold text-primary">
+                        面向高校
+                    </h3>
+                </header>
+
+                <div class="h-px bg-border"></div>
+
+                <div class="space-y-3">
+                    <h4 class="text-base font-semibold text-primary">
+                        价格请咨询。
+                    </h4>
+                    <p class="text-sm leading-relaxed text-dark">
+                        根据各高校的具体需求量身定制的专属机构优惠价。每位参与者均可获得一堂3小时的大师课以及一本《自学英语》电子书。
+                    </p>
+                </div>
+
+                <a
+                    href="mailto:"
+                    class="inline-flex items-center gap-2 rounded-lg group bg-primary text-white py-2 px-4 text-sm font-bold shadow-primary/25 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 transition-all cursor-pointer"
+                >
+                    索取信息
+                    <MailIcon
+                        class="size-4 transition-transform group-hover:translate-x-1"
+                    />
+                </a>
+            </div>
+
+            <div
+                class="overflow-hidden rounded-2xl border-2 border-primary bg-white shadow-xl shadow-primary/10"
+            >
+                <div class="bg-primary p-8 lg:p-10">
+                    <header class="flex items-center gap-4">
+                        <figure
+                            class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-white/10"
+                        >
+                            <BriefcaseIcon class="size-6 text-secondary" />
+                        </figure>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">
+                                面向企业
+                            </h3>
+                            <p class="text-sm text-light/70">
+                                提升您的高管和团队的英语能力
+                            </p>
+                        </div>
+                    </header>
+                </div>
+
+                <div class="p-8 lg:p-10 space-y-5">
+                    <p class="text-sm leading-relaxed text-dark">
+                        3小时大师班 + 每位参与者均可获赠《自学英语》电子书。可选择线下或线上形式。
+                    </p>
+
+                    <div class="overflow-x-auto -mx-4 sm:mx-0">
+                        <table class="min-w-full border-collapse text-left">
+                            <thead class="hidden sm:table-header-group">
+                                <tr class="border-b border-primary/20">
+                                    <th
+                                        class="pb-4 px-4 text-xs font-bold uppercase tracking-wider text-dark"
+                                    >
+                                        参与者
+                                    </th>
+                                    <th
+                                        class="pb-4 px-4 text-xs font-bold uppercase tracking-wider text-dark"
+                                    >
+                                        每人价格
+                                    </th>
+                                    <th
+                                        class="pb-4 px-4 text-xs font-bold uppercase tracking-wider text-dark text-right"
+                                    >
+                                        预计总价
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="divide-y divide-border/60">
+                                {
+                                    businessPricingZh.map((row) => (
+                                        <tr class="block sm:table-row rounded-xl sm:rounded-none bg-light/40 sm:bg-transparent p-4 sm:p-0 mb-4 sm:mb-0">
+                                            {/* Participants */}
+                                            <td class="flex justify-between sm:table-cell px-0 sm:px-4 py-2 text-sm font-medium text-dark">
+                                                <span class="sm:hidden font-semibold text-primary">
+                                                    参与者
+                                                </span>
+                                                {row.participants}
+                                            </td>
+
+                                            {/* Price per person */}
+                                            <td class="flex justify-between sm:table-cell px-0 sm:px-4 py-2 text-sm text-dark">
+                                                <span class="sm:hidden font-semibold text-primary">
+                                                    每人价格
+                                                </span>
+                                                {row.pricePerPerson}
+                                            </td>
+
+                                            {/* Total */}
+                                            <td class="flex justify-between sm:table-cell px-0 sm:px-4 py-2 text-base sm:text-lg font-bold text-primary sm:text-right">
+                                                <span class="sm:hidden font-semibold text-primary">
+                                                    预计总价
+                                                </span>
+                                                {row.totalRange}
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="text-xs text-dark">
+                        * 研讨会人数上限：40人。大型研讨会（40人以上）可享受特别优惠。
+                    </p>
+
+                    <a
+                        href="mailto:"
+                        class="inline-flex items-center gap-2 rounded-lg group bg-primary text-white py-2 px-4 text-sm font-bold shadow-primary/25 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 transition-all cursor-pointer"
+                    >
+                        预约课程
+                        <ArrowRightIcon
+                            class="size-4 transition-transform group-hover:translate-x-1"
+                        />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-10 text-center text-sm text-dark">
+            工作坊人数上限：40人。大型研讨会可享特别优惠。欢迎联系我们获取个性化报价。
+        </footer>
+    </article>
+</section>

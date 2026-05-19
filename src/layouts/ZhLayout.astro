@@ -1,11 +1,11 @@
 ---
 import "../styles/global.css";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
+import NavbarZh from "../components/zh/NavbarZh.astro";
+import FooterZh from "../components/zh/FooterZh.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="zh">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -14,8 +14,8 @@ import Footer from "../components/Footer.astro";
         <title>Master Class Self-Taught English - Learn faster with intelligent and economical methods</title>
     </head>
     <body>
-        <Navbar />
+        <NavbarZh />
         <slot />
-        <Footer />
+        <FooterZh />
     </body>
 </html>

@@ -1,6 +1,6 @@
 ---
 import { CheckCircle2Icon, ClockIcon } from "@lucide/astro";
-import { additional, details, timeline } from "../libs/program";
+import { additionalZh, detailsZh, timelineZh } from "../../libs/program";
 ---
 
 <section id="programs" class="bg-white py-24 lg:py-32">
@@ -9,24 +9,17 @@ import { additional, details, timeline } from "../libs/program";
             <span
                 class="inline-block rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary"
             >
-                PROGRAM
+                节目单
             </span>
             <h2
                 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl text-balance"
             >
-                Program summary
+                项目简介
             </h2>
             <p
                 class="text-base leading-relaxed text-dark lg:text-lg text-pretty w-full text-start"
             >
-                The Self‑Taught English Master Class is a 3‑hour interactive
-                session designed to help learners progress toward CEFR levels
-                B2–C1 through practical self‑study strategies, efficient use of
-                free/low‑cost resources, and smart exam preparation.
-                Participants also learn how to leverage AI tools and discover
-                the “secret” to sustained improvement. Each attendee receives
-                the Self‑Taught English e‑book, which serves as a comprehensive
-                guide for continued learning.
+                “自学英语大师班”是一场时长3小时的互动课程，旨在通过实用的自学策略、免费/低成本资源的高效利用以及科学的备考方法，帮助学习者达到欧洲语言共同参考框架（CEFR）B2至C1级别。参与者还将学习如何运用人工智能工具，并发现持续进步的“秘诀”。每位学员都将获得《自学英语》电子书，该书可作为持续学习的全面指南。
             </p>
         </header>
 
@@ -46,28 +39,27 @@ import { additional, details, timeline } from "../libs/program";
                     />
                 </figure>
                 <h3 class="my-2 text-2xl font-bold text-primary">
-                    Prof. Martin Zale Winkler
+                    马丁·扎勒·温克勒教授
                 </h3>
                 <p
                     class="text-center text-sm font-semibold text-secondary lg:text-left"
                 >
-                    Graduate of UC Berkeley
+                    加州大学伯克利分校毕业生
                 </p>
                 <p
                     class="mt-1 text-center text-sm font-semibold text-dark lg:text-left"
                 >
-                    California certified teacher
+                    加州认证教师
                 </p>
                 <p
                     class="mt-2 text-center text-sm leading-relaxed text-dark lg:text-left"
                 >
-                    Over 30 years of experience helping students and
-                    professionals succeed worldwide.
+                    30多年来，我们一直致力于帮助全球各地的学生和专业人士取得成功。
                 </p>
 
                 <ul class="mt-4 flex w-full flex-col gap-4">
                     {
-                        details.map((item) => (
+                        detailsZh.map((item) => (
                             <li class="flex items-start gap-3">
                                 <figure class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                                     <item.icon class="size-5 text-primary" />
@@ -89,10 +81,10 @@ import { additional, details, timeline } from "../libs/program";
             <div class="flex-1 space-y-10">
                 <header class="space-y-2">
                     <h3 class="text-xl font-bold text-primary">
-                        Timeline: 3 hours of Master Class
+                        时间安排：3小时的大师班
                     </h3>
                     <p class="text-sm text-dark">
-                        Each module is designed to maximize your learning.
+                        每个模块的设计都旨在最大限度地提升您的学习效果。
                     </p>
                 </header>
 
@@ -104,7 +96,7 @@ import { additional, details, timeline } from "../libs/program";
 
                     <ul class="flex flex-col gap-8">
                         {
-                            timeline.map((mod, i) => (
+                            timelineZh.map((mod, i) => (
                                 <li class="group relative flex gap-5">
                                     <div class="relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full border border-secondary bg-background text-sm font-bold text-secondary shadow-sm transition-all group-hover:bg-secondary group-hover:text-white">
                                         {i + 1}
@@ -139,7 +131,7 @@ import { additional, details, timeline } from "../libs/program";
                                         <figure class="flex items-center gap-1.5 text-xs font-medium text-secondary">
                                             <CheckCircle2Icon class="size-3.5" />
                                             <figcaption>
-                                                Included in your Master Class
+                                                大师班包含以下内容
                                             </figcaption>
                                         </figure>
                                     </article>
@@ -152,7 +144,7 @@ import { additional, details, timeline } from "../libs/program";
                 <div class="relative">
                     <ul class="flex flex-col gap-8">
                         {
-                            additional.map((mod) => (
+                            additionalZh.map((mod) => (
                                 <li class="group relative flex gap-5">
                                     <article class="flex-1 rounded-xl border border-border bg-white p-5 shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:border-primary/30 space-y-2">
                                         <div class="flex items-center gap-3">

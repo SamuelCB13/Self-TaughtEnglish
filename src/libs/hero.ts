@@ -6,9 +6,22 @@ export const badges = [
     { icon: GlobeIcon, label: "30+ years global", font: "font-medium" },
 ]
 
+export const badgesZh = [
+    { icon: ShieldIcon, label: "加利福尼亚州证书", font: "font-medium" },
+    { icon: AwardIcon, label: "加州大学伯克利分校", font: "font-bold italic" },
+    { icon: GlobeIcon, label: "30余年全球", font: "font-medium" },
+]
+
 export const stats = [
     { value: "30+", label: "Years of experience" },
     { value: "10K+", label: "Students" },
     { value: "B2 - C1", label: "CEFR Level" },
     { value: "UC Berkeley", label: "Credential" },
+]
+
+export const statsZh = [
+    { value: "30+", label: "多年的经验" },
+    { value: "1万+", label: "学生" },
+    { value: "B2 - C1", label: "欧洲语言共同参考框架（CEFR）级别" },
+    { value: "加州大学伯克利分校", label: "凭证" },
 ]

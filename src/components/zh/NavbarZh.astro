@@ -1,5 +1,5 @@
 ---
-import { navbar } from "../libs/navbar";
+import { navbarZh } from "../../libs/navbar";
 ---
 
 <header
@@ -9,7 +9,7 @@ import { navbar } from "../libs/navbar";
     <nav
         class="flex items-center justify-between h-20 py-5 px-6 transition-all duration-300 mx-auto max-w-7xl"
     >
-        <a href="/">
+        <a href="/zh">
             <figure class="flex items-center gap-2">
                 <img
                     src="/logo.jpg"
@@ -24,7 +24,7 @@ import { navbar } from "../libs/navbar";
 
         <ul class="hidden lg:flex items-center gap-7 text-white font-bold">
             {
-                navbar.map((item) => (
+                navbarZh.map((item) => (
                     <li>
                         <a
                             href={item.href}
@@ -41,7 +41,7 @@ import { navbar } from "../libs/navbar";
             href="#contact"
             class="hidden lg:flex items-center gap-2 rounded-lg bg-secondary text-white py-2 px-4 text-base font-bold shadow-secondary/25 hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 transition-all cursor-pointer"
         >
-            Book now
+            立即预订
         </a>
 
         <button
@@ -59,7 +59,7 @@ import { navbar } from "../libs/navbar";
     >
         <ul class="flex flex-col gap-5 text-white font-bold">
             {
-                navbar.map((item) => (
+                navbarZh.map((item) => (
                     <li>
                         <a
                             href={item.href}
@@ -76,7 +76,7 @@ import { navbar } from "../libs/navbar";
             href="#contact"
             class="mt-6 inline-block w-full text-center rounded-lg bg-secondary text-white py-3 font-bold hover:bg-secondary/90 transition-all"
         >
-            Book now
+            立即预订
         </a>
     </div>
 </header>

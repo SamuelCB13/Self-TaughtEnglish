@@ -23,19 +23,80 @@ export const details = [
     },
 ]
 
+export const detailsZh = [
+    {
+        icon: ClockIcon,
+        label: "格式",
+        value: "3小时大师班（英语或西班牙语）",
+    },
+    {
+        icon: GlobeIcon,
+        label: "模态",
+        value: "在线或线下",
+    },
+    {
+        icon: UsersRoundIcon,
+        label: "公开",
+        value: "大学、企业、专业人士、积极进取的学生",
+    },
+    {
+        icon: GiftIcon,
+        label: "额外奖励",
+        value: "每位参与者都将获得电子书《自学英语》",
+    },
+]
+
+export const timelineZh = [
+    {
+        icon: ClockIcon,
+        classIcon: "text-primary",
+        hour: "第1小时",
+        time: "0:00 - 1:00",
+        title: "欧洲语言共同参考框架（CEFR）+ 核心技能",
+        bullets: [
+            "了解《欧洲语言共同参考框架》（CEFR）等级及自我评估。",
+            "语法、听力、口语、阅读、写作策略。",
+            "每项技能的免费/低成本资源。",
+        ]
+    },
+    {
+        icon: CogIcon,
+        classIcon: "text-green-600",
+        hour: "第2小时",
+        time: "1:00 - 2:00",
+        title: "学习规划 + 备考",
+        bullets: [
+            "指导性学习时间与非指导性学习时间。",
+            "达到B2–C1级别的现实时间表。",
+            "托福、托业、雅思考试备考建议。",
+        ]
+    },
+    {
+        icon: MapPlusIcon,
+        classIcon: "text-secondary",
+        hour: "第3小时",
+        time: "2:00 - 3:00",
+        title: "AI 工具 + 深度洞察",
+        bullets: [
+            "有效利用人工智能进行语言学习。",
+            "保持持续进步所需的动力与生活技能。",
+            "提高语言水平的“秘诀”。",
+            "通往C2水平或真正流利表达的途径。",
+        ]
+    }
+]
+
 export const timeline = [
     {
         icon: ClockIcon,
         classIcon: "text-primary",
         hour: "Hour 1",
         time: "0:00 - 1:00",
-        title: "Orientation & Foundations",
-        desc: "Initial evaluation, self-study methodology and AI tools",
+        title: "CEFR + Core Skills",
         bullets: [
-            "Start improving today: practical steps to begin raising your English level immediately",
-            "Understanding CEFR levels (A1-C2): what they mean for academic and business success",
-            "What Is My English Level? — CEFR framework explained in simple terms",
-            "Levels B2-C1: minimum requirement for graduate school, visas, and effective communication"
+            "Understanding CEFR levels and self‑assessment.",
+            "Grammar, listening, speaking, reading, writing strategies.",
+            "Free/low‑cost resources for each skill.",
         ]
     },
     {
@@ -43,16 +104,11 @@ export const timeline = [
         classIcon: "text-green-600",
         hour: "Hour 2",
         time: "1:00 - 2:00",
-        title: "Skills & Techniques",
-        desc: "Grammar, Listening, Speaking, Reading and Writing strategies",
+        title: "Study Planning + Exam Prep",
         bullets: [
-            "Grammar: importance, Life Skills method, resources (books, YouTube, AI)",
-            "Listening: important variables (accents, speed, ambient noise), resources (television and the 3-Step Method, VOA, podcasts)",
-            "Speaking: experienced, native teacher; language exchanges; how AI has revolutionized learning",
-            "Reading: resources to expand vocabulary and comprehension including AI",
-            "Writing: suggestions for practice; AI-based correction tools",
-            "Demonstrations of AI tools: pronunciation, conversation, writing correction",
-            "Making learning fun: strategies to stay motivated and consistent"
+            "Guided vs. unguided learning hours.",
+            "Realistic timelines for reaching B2–C1.",
+            "Exam tips for TOEFL, TOEIC, IELTS.",
         ]
     },
     {
@@ -60,21 +116,12 @@ export const timeline = [
         classIcon: "text-secondary",
         hour: "Hour 3",
         time: "2:00 - 3:00",
-        title: "Application & Roadmap",
-        desc: "Official CEFR estimates, exam strategies and roadmap",
+        title: "AI Tools + Advanced Insights",
         bullets: [
-            "How many hours do I need to achieve CEFR B2 or C1?",
-            "CEFR official estimates",
-            "Guided vs. unguided learning hours",
-            "Key factors affecting progress (education, time commitments, focus, practice)",
-            "Why achieving C2 or “true fluency” is unrealistic (but B2-C1 is attainable)",
-            "How can I achieve the highest score on standardized tests?",
-            "TOEFL iBT, IELTS strategies",
-            "Tips for listening, speaking, and test preparation",
-            "Exam readiness: practical strategies for success",
-            "The most important secret to improving your English level",
-            "Closing reflections & Q&A",
-            "Distribution of the SELF-TAUGHT ENGLISH e-book"
+            "Using AI effectively for language learning.",
+            "Motivation and life skills for sustained progress.",
+            "The “secret” to achieving higher proficiency.",
+            "Pathways toward C2 or true fluency.",
         ]
     }
 ]
@@ -85,11 +132,11 @@ export const additional = [
         classIcon: "text-dark",
         title: "Key Takeaways",
         bullets: [
-            "Clear roadmap to CEFR B2-C1 proficiency",
-            "Effective, low-cost self-study techniques and resources",
-            "AI demonstrations that make self-study engaging and practical",
-            "Exam preparation strategies for international certifications",
-            "Personalized plan supported by the SELF-TAUGHT ENGLISH e-book"
+            "Proficiency First: The Master Class emphasizes overall English improvement, with exam prep as a supporting element.",
+            "Scalable Methods: Learners gain strategies that work across skills and contexts, adaptable to self‑study.",
+            "Efficient Progress: Clear timelines and realistic expectations help participants reach B2–C1 faster.",
+            "Smart Tools: AI integration and resource curation make learning cost‑effective and modern.",
+            "Sustained Growth: Motivation, life skills, and the “secret” ensure learners continue improving beyond the class."
         ]
     },
     {
@@ -102,6 +149,33 @@ export const additional = [
             "Languages: English, Spanish, or bilingual",
             "Materials: Each participant receives the SELF-TAUGHT ENGLISH e-book",
             "Pricing: Flexible depending on group size and delivery format. Contact us for details.",
+        ]
+    },
+]
+
+export const additionalZh = [
+    {
+        icon: KeySquareIcon,
+        classIcon: "text-dark",
+        title: "要点",
+        bullets: [
+            "精通优先：大师班”课程侧重于全面提升英语水平，考试备考仅作为辅助内容。",
+            "可扩展的方法：学习者将掌握适用于各种技能和情境的策略，并能灵活运用于自主学习。",
+            "高效进步：明确的时间表和切合实际的预期有助于学员更快达到B2–C1水平。",
+            "智能工具：通过人工智能集成和资源精选，让学习既经济高效又与时俱进。",
+            "持续成长：动力、生活技能以及那个“秘诀”，确保学习者在课堂之外也能持续进步。"
+        ]
+    },
+    {
+        icon: TruckIcon,
+        classIcon: "text-dark",
+        title: "物流",
+        bullets: [
+            "时长：3小时",
+            "形式：线上、线下或礼堂授课",
+            "语言：英语、西班牙语或双语",
+            "材料：每位参与者将获得《自学英语》电子书",
+            "价格：根据团队规模和培训形式灵活调整。详情请联系我们。",
         ]
     },
 ]
