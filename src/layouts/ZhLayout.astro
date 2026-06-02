@@ -5,21 +5,90 @@ import FooterZh from "../components/zh/FooterZh.astro";
 ---
 
 <!doctype html>
-<html lang="zh">
+<html lang="zh-CN">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="canonical" href="https://selftaughtenglish.com/" />
+
         <meta name="generator" content={Astro.generator} />
-        <title>Master Class Self-Taught English - Learn faster with intelligent and economical methods</title>
+
+        <!-- SEO -->
+        <title>
+            Self-Taught English | 更快速学习英语的智能且经济实惠的方法
+        </title>
+
+        <meta
+            name="description"
+            content="通过 Self-Taught English 更快速地学习英语。探索专为全球自主学习者设计的实用、智能且经济实惠的英语学习方法。"
+        />
+
+        <meta
+            name="keywords"
+            content="学习英语, 自学英语, 英语课程, 英语学习, 提高英语水平, 英语口语, 英语词汇, 在线英语课程, 英语培训, 英语自学"
+        />
+
+        <meta name="author" content="Self-Taught English" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://selftaughtenglish.com/" />
+        <meta
+            property="og:title"
+            content="Self-Taught English | 更快速学习英语"
+        />
+        <meta
+            property="og:description"
+            content="通过实用、智能且经济实惠的方法，更快速地掌握英语。"
+        />
+        <meta
+            property="og:image"
+            content="https://selftaughtenglish.com/og-image.jpg"
+        />
+        <meta property="og:site_name" content="Self-Taught English" />
+        <meta property="og:locale" content="zh_CN" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Self-Taught English | 更快速学习英语"
+        />
+        <meta
+            name="twitter:description"
+            content="通过实用、智能且经济实惠的方法，更快速地掌握英语。"
+        />
+        <meta
+            name="twitter:image"
+            content="https://selftaughtenglish.com/og-image.jpg"
+        />
     </head>
     <body>
         <NavbarZh />
         <slot />
         <FooterZh />
 
-        <a href="/" class="fixed bottom-5 right-5 z-50 py-3 px-4 rounded-full bg-secondary text-white text-sm font-semibold shadow-lg hover:bg-secondary/80 transition-colors cursor-pointer">
+        <a
+            href="/"
+            class="fixed bottom-5 right-5 z-50 py-3 px-4 rounded-full bg-secondary text-white text-sm font-semibold shadow-lg hover:bg-secondary/80 transition-colors cursor-pointer"
+        >
             🌍 English
         </a>
     </body>
 </html>
+
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        name: "Self-Taught English",
+        url: "https://selftaughtenglish.com",
+        description:
+            "Learn English faster with intelligent and affordable methods.",
+        inLanguage: "en",
+    })}
+/>

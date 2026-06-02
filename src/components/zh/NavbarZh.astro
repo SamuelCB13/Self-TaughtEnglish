@@ -1,4 +1,5 @@
 ---
+import { BookOpenIcon } from "@lucide/astro";
 import { navbarZh } from "../../libs/navbar";
 ---
 
@@ -10,16 +11,14 @@ import { navbarZh } from "../../libs/navbar";
         class="flex items-center justify-between h-20 py-5 px-6 transition-all duration-300 mx-auto max-w-7xl"
     >
         <a href="/zh">
-            <figure class="flex items-center gap-2">
-                <img
-                    src="/logo.jpg"
-                    alt="Logo de Self-Taught English"
-                    class="w-20"
-                />
-                <figcaption class="text-white font-black block lg:hidden xl:block">
-                    Self-Taught English
-                </figcaption>
-            </figure>
+            <div class="flex items-center justify-center gap-2.5">
+                <div
+                    class="flex size-9 items-center justify-center rounded-lg bg-secondary"
+                >
+                    <BookOpenIcon class="size-5 text-primary" />
+                </div>
+                <span class="text-lg font-black text-white">自学英语</span>
+            </div>
         </a>
 
         <ul class="hidden lg:flex items-center gap-7 text-white font-bold">

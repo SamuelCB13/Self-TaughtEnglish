@@ -8,21 +8,88 @@ import Footer from "../components/Footer.astro";
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="canonical" href="https://selftaughtenglish.com/" />
+
         <meta name="generator" content={Astro.generator} />
+
+        <!-- SEO -->
         <title>
-            Master Class Self-Taught English - Learn faster with intelligent and
-            economical methods
+            Self-Taught English | Learn English Faster with Smart and Affordable
+            Methods
         </title>
+
+        <meta
+            name="description"
+            content="Learn English faster with Self-Taught English. Discover practical, intelligent, and affordable methods designed for independent learners worldwide."
+        />
+
+        <meta
+            name="keywords"
+            content="learn english, self taught english, english course, english learning, improve english, english speaking, english vocabulary, affordable english course, online english learning"
+        />
+
+        <meta name="author" content="Self-Taught English" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://selftaughtenglish.com/" />
+        <meta
+            property="og:title"
+            content="Self-Taught English | Learn English Faster"
+        />
+        <meta
+            property="og:description"
+            content="Practical, intelligent and affordable methods to learn English faster."
+        />
+        <meta
+            property="og:image"
+            content="https://selftaughtenglish.com/og-image.jpg"
+        />
+        <meta property="og:site_name" content="Self-Taught English" />
+        <meta property="og:locale" content="en_US" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Self-Taught English | Learn English Faster"
+        />
+        <meta
+            name="twitter:description"
+            content="Practical, intelligent and affordable methods to learn English faster."
+        />
+        <meta
+            name="twitter:image"
+            content="https://selftaughtenglish.com/og-image.jpg"
+        />
     </head>
     <body>
         <Navbar />
         <slot />
         <Footer />
 
-        <a href="/zh" class="fixed bottom-5 right-5 z-50 py-3 px-4 rounded-full bg-secondary text-white text-sm font-semibold shadow-lg hover:bg-secondary/80 transition-colors cursor-pointer">
+        <a
+            href="/zh"
+            class="fixed bottom-5 right-5 z-50 py-3 px-4 rounded-full bg-secondary text-white text-sm font-semibold shadow-lg hover:bg-secondary/80 transition-colors cursor-pointer"
+        >
             🌍 中文
         </a>
     </body>
 </html>
+
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        name: "Self-Taught English",
+        url: "https://selftaughtenglish.com",
+        description:
+            "Learn English faster with intelligent and affordable methods.",
+        inLanguage: "en",
+    })}
+/>
