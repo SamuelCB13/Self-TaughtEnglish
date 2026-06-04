@@ -74,10 +74,61 @@ import Footer from "../components/Footer.astro";
 
         <a
             href="/zh"
-            class="fixed bottom-5 right-5 z-50 py-3 px-4 rounded-full bg-secondary text-white text-sm font-semibold shadow-lg hover:bg-secondary/80 transition-colors cursor-pointer"
+            class="fixed bottom-5 right-5 z-50 py-3 px-4 rounded-full bg-secondary text-white text-sm font-semibold shadow-lg hover:bg-secondary/70 transition-colors cursor-pointer"
         >
             🌍 中文
         </a>
+        <button
+            id="wechatBtn"
+            class="fixed bottom-20 right-5 z-50 py-3 px-4 rounded-full bg-green-500 text-white text-sm font-semibold shadow-lg hover:bg-green-600 transition-colors cursor-pointer flex items-center gap-2"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path
+                    d="M16.5 10c3.038 0 5.5 2.015 5.5 4.5c0 1.397 -.778 2.645 -2 3.47l0 2.03l-1.964 -1.178a6.649 6.649 0 0 1 -1.536 .178c-3.038 0 -5.5 -2.015 -5.5 -4.5s2.462 -4.5 5.5 -4.5z"
+                ></path>
+                <path
+                    d="M11.197 15.698c-.69 .196 -1.43 .302 -2.197 .302a8.008 8.008 0 0 1 -2.612 -.432l-2.388 1.432v-2.801c-1.237 -1.082 -2 -2.564 -2 -4.199c0 -3.314 3.134 -6 7 -6c3.782 0 6.863 2.57 7 5.785l0 .233"
+                ></path>
+                <path d="M10 8h.01"></path>
+                <path d="M7 8h.01"></path>
+                <path d="M15 14h.01"></path>
+                <path d="M18 14h.01"></path>
+            </svg>
+            WeChat
+        </button>
+        <div
+            id="wechatModal"
+            class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+        >
+            <div class="bg-white rounded-xl p-6 relative max-w-sm w-full mx-4">
+                <button
+                    id="closeWechatModal"
+                    class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl cursor-pointer"
+                >
+                    ✕
+                </button>
+
+                <h3 class="text-lg font-bold text-center mb-4">
+                    Scan WeChat QR Code
+                </h3>
+
+                <img
+                    src="/qr-wechat.jpeg"
+                    alt="WeChat QR Code"
+                    class="w-full rounded-lg"
+                />
+            </div>
+        </div>
     </body>
 </html>
 
@@ -93,3 +144,28 @@ import Footer from "../components/Footer.astro";
         inLanguage: "en",
     })}
 />
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("wechatBtn");
+        const modal = document.getElementById("wechatModal");
+        const closeBtn = document.getElementById("closeWechatModal");
+
+        btn?.addEventListener("click", () => {
+            modal?.classList.remove("hidden");
+            modal?.classList.add("flex");
+        });
+
+        closeBtn?.addEventListener("click", () => {
+            modal?.classList.add("hidden");
+            modal?.classList.remove("flex");
+        });
+
+        modal?.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.add("hidden");
+                modal.classList.remove("flex");
+            }
+        });
+    });
+</script>
